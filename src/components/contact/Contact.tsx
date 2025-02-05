@@ -1,6 +1,6 @@
 // import { motion } from "motion/react";
 import AnimatedPageWrapper from "../common/AnimatedPageWrapper";
-// import ContactForm from "./form";
+import ContactForm from "./Form";
 // import ContactMeAnimation from "./contactMeAnimation";
 
 const Contact = () => {
@@ -12,7 +12,7 @@ const Contact = () => {
         </div>
 
         <div className="h-1/2 lg:h-full lg:w-1/2  flex items-start lg:items-center  justify-center">
-          {/* <ContactForm /> */}
+          <ContactForm />
         </div>
       </div>
     </AnimatedPageWrapper>
