@@ -5,6 +5,7 @@ import About from "./components/about/About";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/common/Footer";
+import LogoGlow from "./components/common/logoGlow";
 
 const App = () => {
   return (
@@ -20,6 +21,9 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
+      </div>
+      <div className="absolute z-0 w-0 lg:w-full h-36 top-0 left-0 min-w-30 md:hidden lg:flex">
+        <LogoGlow />
       </div>
     </div>
   );
