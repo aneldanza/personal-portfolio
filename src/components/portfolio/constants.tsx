@@ -53,9 +53,10 @@ export const items = [
       "Kaminari",
       "Jsonapi-Serializer",
       "PG Search",
+      "Heroku",
     ],
     img: "https://digital-image-assets.s3.us-east-2.amazonaws.com/portfolio/devexchange-api.webp",
-    link: "https://github.com/aneldanza/dev-exchange-api",
+
     repo: "https://github.com/aneldanza/dev-exchange-api",
   },
   {
@@ -108,10 +109,6 @@ export const items = [
             </li>
           </ul>
         </div>
-        {/* <p>
-            This plugin simplifies workflows and enhances productivity for
-            Littelfuse’s product management.
-          </p> */}
       </div>
     ),
     tools: ["Javascript", "CerosSDK", "Papa Parse"],

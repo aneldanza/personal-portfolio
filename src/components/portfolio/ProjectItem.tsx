@@ -18,7 +18,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
         </h1>
         <div className="flex flex-col gap-4 md:flex-row md:gap-6 lg:gap-8">
           <Link
-            to={item.link}
+            to={item.link ? item.link : item.repo}
             target="_blank"
             className="relative h-36 md:h-80 lg:h-[500px] xl:h-[600px] project-image-width bg-neutral-100 rounded hover:transition-transform  hover:shadow-lg hover:shadow-primary-text shrink-0"
           >
@@ -41,23 +41,29 @@ const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
           </div>
         </div>
         <div className="flex justify-end gap-4 pr-8">
-          <Link to={item.link} target="_blank" className="">
-            <motion.button
-              className="project-item-button relative "
-              whileHover={{ scale: 1.02 }}
-              transition={{ ease: "easeInOut" }}
-            >
-              <motion.div
-                className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gradient-mid to-accent-bg z-0 project-item-button border-0 rounded shadow-md"
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ type: "tween", duration: 0.5, ease: "easeInOut" }}
+          {item.link && (
+            <Link to={item.link} target="_blank" className="">
+              <motion.button
+                className="project-item-button relative "
+                whileHover={{ scale: 1.02 }}
+                transition={{ ease: "easeInOut" }}
               >
-                Visit Site
-              </motion.div>
-              <span className="">Visit Site</span>
-            </motion.button>
-          </Link>
+                <motion.div
+                  className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gradient-mid to-accent-bg z-0 project-item-button border-0 rounded shadow-md"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  transition={{
+                    type: "tween",
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                >
+                  Visit Site
+                </motion.div>
+                <span className="">Visit Site</span>
+              </motion.button>
+            </Link>
+          )}
           <Link to={item.repo} target="_blank" className="">
             <motion.button
               className="project-item-button relative "

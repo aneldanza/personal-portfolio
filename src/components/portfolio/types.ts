@@ -4,6 +4,6 @@ export type Project = {
   desc: () => JSX.Element;
   img: string;
   tools: string[];
-  link: string;
+  link?: string;
   repo: string;
 };
