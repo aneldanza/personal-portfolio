@@ -20,7 +20,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
           <Link
             to={item.link ? item.link : item.repo}
             target="_blank"
-            className="relative h-36 md:h-80 lg:h-[500px] xl:h-[600px] project-image-width bg-neutral-100 rounded hover:transition-transform  hover:shadow-lg hover:shadow-primary-text shrink-0"
+            className="relative h-36 md:h-80 lg:h-[500px] xl:h-[600px] project-image-width bg-neutral-100 rounded hover:transition-transform  hover:shadow-lg hover:shadow-primary-text shrink-0 flex items-center justify-center"
           >
             <img src={item.img} alt={item.title} className="rounded" />
           </Link>

@@ -10,7 +10,7 @@ interface ScrollingContentProps {
 const ScrollingContent: FC<ScrollingContentProps> = ({ scrollYProgress }) => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-75%"]);
   return (
-    <motion.div style={{ x }} className="flex gap-4">
+    <motion.div style={{ x }} className="flex gap-10">
       {items.map((item) => (
         <ProjectItem key={item.id} item={item} />
       ))}

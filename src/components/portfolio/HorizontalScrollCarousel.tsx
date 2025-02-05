@@ -12,9 +12,9 @@ const HorizontalScrollCarousel = () => {
   return (
     <section
       ref={projectsContainer}
-      className="h-[300vh] bg-gradient-mid relative"
+      className="h-[300vh] bg-gradient-to relative"
     >
-      <div className="h-screen bg-gradient-to sticky top-0 flex items-center overflow-hidden ">
+      <div className="h-screen bg-gradient-to sticky top-0 flex items-start overflow-hidden ">
         <ScrollingContent scrollYProgress={scrollYProgress} />
       </div>
     </section>
