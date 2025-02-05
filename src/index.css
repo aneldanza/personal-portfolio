@@ -1,68 +1,85 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --bg-accent: 153, 27, 27;
+    --bg-accent-hover: 127, 17, 17;
+    --secondary-bg: 185, 28, 28;
+    --secondary-bg-hover: 159, 18, 18;
+    --text-accent: 255, 255, 255;
+    --gradient-from: 252, 231, 243;
+    --gradient-mid: 255, 237, 213;
+    --gradient-to: 254, 249, 195;
+    --primary-text: 31, 41, 55;
+    --form-bg: 249, 250, 251;
   }
-  a:hover {
-    color: #747bff;
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-accent: 252, 211, 77;
+      --bg-accent-hover: 250, 190, 50;
+      --secondary-bg: 254, 240, 138;
+      --secondary-bg-hover: 253, 224, 71;
+      --text-accent: 31, 41, 55;
+      --gradient-from: 30, 58, 138;
+      --gradient-mid: 13, 71, 85;
+      --gradient-to: 17, 24, 39;
+      --primary-text: 209, 213, 219;
+      --form-bg: 253, 245, 230;
+    }
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@theme {
+  --color-primary-text: rgb(var(--primary-text));
+  --color-accent-text: rgb(var(--text-accent));
+  --color-accent-bg: rgb(var(--bg-accent));
+  --color-accent-hover: rgb(var(--bg-accent-hover));
+  --color-accent-secondary-bg: rgb(var(--secondary-bg));
+  --color-accent-secondary-hover: rgb(var(--secondary-bg-hover));
+  --color-gradient-from: rgb(var(--gradient-from));
+  --color-gradient-mid: rgb(var(--gradient-mid));
+  --color-gradient-to: rgb(var(--gradient-to));
+  --color-form-bg: rgb(var(--form-bg));
+}
+@layer components {
+  .app-container {
+    @apply sm:px-8 md:px-12 lg:px-20 xl:px-48 px-4;
+  }
+
+  .home-section {
+    @apply h-1/2 lg:h-full lg:w-1/2;
+  }
+
+  .about-section {
+    @apply flex flex-col gap-12 justify-center;
+  }
+
+  .skill-tag {
+    @apply bg-primary-text text-accent-text px-2 py-1 rounded text-sm  hover:bg-white hover:text-black border border-black;
+  }
+
+  .project-image-width {
+    @apply w-36 md:w-80 lg:w-[500px] xl:w-[600px];
+  }
+
+  .project-text-width {
+    @apply w-full md:w-full lg:w-[500px] xl:w-[600px];
+  }
+
+  .input-field {
+    @apply bg-transparent border-b-2 border-b-gray-900 outline-none;
+  }
+
+  .blue-to-red-gradient {
+    @apply bg-gradient-to-b from-blue-50 to-red-100;
+  }
+
+  .project-item-button {
+    @apply p-2 text-sm md:px-4 md:text-base lg:px-8 lg:py-4 lg:text-lg text-primary-text font-semibold rounded-md border border-accent-bg;
+  }
+
+  .error-message {
+    @apply text-red-500 text-sm;
   }
 }
