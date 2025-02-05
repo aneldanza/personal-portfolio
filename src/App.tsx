@@ -30,7 +30,7 @@ const App = () => {
           </Routes>
           <Footer />
         </div>
-        <div className="absolute z-0 w-0 lg:w-full h-36 top-0 left-0 min-w-30 md:hidden lg:flex">
+        <div className="hidden z-0 lg:absolute lg:w-full h-36 top-0 left-0 min-w-30 lg:flex">
           <LogoGlow />
         </div>
       </div>
