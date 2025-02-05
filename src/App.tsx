@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router";
-import NavBar from "./components/NavBar/NavBar";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
+import NavBar from "./components/navbar/NavBar";
+import Home from "./components/home/Home";
+import About from "./components/about/About";
+import Portfolio from "./components/portfolio/Portfolio";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
         <Route element={<Home />} path="/" />
         <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
     </div>
   );
