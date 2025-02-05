@@ -27,22 +27,22 @@ const ContactForm = () => {
 
     if (!form.current) return;
 
+    const emailServiceId = import.meta.env.VITE_PUBLIC_EMAIL_SERVICE_ID;
+    const emailTemplateId = import.meta.env.VITE_PUBLIC_EMAIL_TEMPLATE_ID;
+    const emailPublicKey = import.meta.env.VITE_PUBLIC_EMAIL_PUBLIC_KEY;
+
     emailjs
-      .sendForm(
-        process.env.REACT_APP_PUBLIC_EMAIL_SERVICE_ID || "",
-        process.env.REACT_APP_PUBLIC_EMAIL_TEMPLATE_ID || "",
-        form.current,
-        {
-          publicKey: process.env.REACT_APP_PUBLIC_EMAIL_PUBLIC_KEY || "",
-        }
-      )
+      .sendForm(emailServiceId || "", emailTemplateId || "", form.current, {
+        publicKey: emailPublicKey || "",
+      })
       .then(
         () => {
           setSuccess(true);
 
           form.current?.reset();
         },
-        () => {
+        (e) => {
+          console.error(e);
           setError(true);
         }
       );
