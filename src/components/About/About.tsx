@@ -1,5 +1,5 @@
 import { motion, useScroll, useInView } from "motion/react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { skills, jobs } from "./constants";
 import ExperienceItem from "./ExperienceItem";
 import ScrollIcon from "./ScrollIcon";
@@ -9,6 +9,12 @@ import Innovation from "./Innovation";
 const AboutPage = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ container: containerRef });
+
+  useEffect(() => {
+    scrollYProgress.on("change", (v) => {
+      console.log(v);
+    });
+  }, []);
 
   const skillContainerRef = useRef<HTMLDivElement>(null);
   const isSkillContainerInView = useInView(skillContainerRef, {

@@ -9,9 +9,6 @@ const Innovation: FC<InnovationProps> = ({ scrollYProgress }) => {
   const rotatesForward1 = useTransform(scrollYProgress, [0, 1], [0, 360]);
   const rotatesBackward1 = useTransform(scrollYProgress, [0, 1], [0, -360]);
 
-  console.log(rotatesForward1.get());
-  console.log(rotatesBackward1.get());
-
   useEffect(() => {
     setTimeout(() => {
       const innovation = document.getElementById("freepik_stories-innovation")!;

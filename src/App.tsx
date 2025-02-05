@@ -6,15 +6,17 @@ import Portfolio from "./components/portfolio/Portfolio";
 
 const App = () => {
   return (
-    <div className="w-screen h-screen bg-gradient-to-b from-gradient-from via-gradient-mid to-gradient-to text-primary-text relative overflow-scroll">
+    <div className="w-screen h-screen bg-gradient-to-b from-gradient-from via-gradient-mid to-gradient-to text-primary-text relative">
       <div className="h-24">
         <NavBar />
       </div>
-      <Routes>
-        <Route element={<Home />} path="/" />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-      </Routes>
+      <div className="h-[calc(100vh-6rem)]">
+        <Routes>
+          <Route element={<Home />} path="/" />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+        </Routes>
+      </div>
     </div>
   );
 };
