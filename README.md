@@ -1,50 +1,77 @@
-# React + TypeScript + Vite
+# Personal Software Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal software developer portfolio! This project showcases my skills, projects, and experience as a software developer. It is built using modern web development technologies including Vite, React, React-router, and TailwindCSS.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Available Scripts](#available-scripts)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Responsive Design**: The portfolio is fully responsive and looks great on all devices.
+- **Smooth Navigation**: Utilizes React-router for smooth and seamless navigation between pages.
+- **Modern UI**: Styled with TailwindCSS for a clean and modern user interface.
+- **Fast Development**: Built with Vite for fast development and hot module replacement (HMR).
+- **Type Safety**: Implemented with TypeScript for enhanced code reliability and developer experience.
+- **Smooth Animations**: Integrated Framer Motion library for fluid transitions and engaging UI animations.
+- **Custom SVG Animations**: Features Storyset illustrations with custom animations for enhanced visual appeal and interactivity.
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+To get a local copy up and running, follow these simple steps:
+
+### Prerequisites
+
+- Node.js (version 14 or higher)
+- npm (version 6 or higher) or yarn (version 1.22 or higher)
+
+### Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/personal-portfolio.git
+   ```
+2. Navigate to the project directory:
+
+   ```sh
+   cd personal-portfolio
+   ```
+
+3. Install dependencies:
+
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
+
+4. Start the development server:
+
+   ```sh
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+## Project Structure
+
+```
+personal-portfolio/
+├── public/           # Static files
+├── src/             # Source files
+│   ├── components/  # React components
+│   ├── assets/      # Images and other assets
+│   ├── App.tsx      # Main application component
+│   ├── main.tsx     # Application entry point
+│   ├── index.css    # Global styles
+└── package.json     # Project dependencies
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Available Scripts
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- `npm run dev` - Starts the development server
+- `npm run build` - Builds the app for production
+- `npm run preview` - Preview the production build locally
