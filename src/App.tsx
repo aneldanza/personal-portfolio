@@ -6,10 +6,12 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/common/Footer";
 import LogoGlow from "./components/common/logoGlow";
+import PageTransition from "./components/common/PageTransition";
 
 const App = () => {
   return (
     <div className="w-screen h-screen bg-gradient-to-b from-gradient-from via-gradient-mid to-gradient-to text-primary-text relative">
+      <PageTransition />
       <div className="h-24">
         <NavBar />
       </div>
