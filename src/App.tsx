@@ -3,6 +3,8 @@ import NavBar from "./components/navbar/NavBar";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Portfolio from "./components/portfolio/Portfolio";
+import Contact from "./components/contact/Contact";
+import Footer from "./components/common/Footer";
 
 const App = () => {
   return (
@@ -12,10 +14,12 @@ const App = () => {
       </div>
       <div className="h-[calc(100vh-6rem)]">
         <Routes>
-          <Route element={<Home />} path="/" />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </div>
   );
