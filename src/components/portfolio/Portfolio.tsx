@@ -7,7 +7,7 @@ import ScrollIcon from "../about/ScrollIcon";
 const PortfolioPage = () => {
   return (
     <AnimatedPageWrapper>
-      <div className=" bg-gradient-to-b from-gradient-from via-gradient-mid to-gradient-to w-screen h-[calc(100vh-6rem)] flex flex-col justify-center items-center">
+      <div className="w-screen h-[calc(100vh-6rem)] flex flex-col justify-center items-center">
         <div className="flex justify-center items-center text-6xl md:text-8xl text-center">
           My Work
         </div>
