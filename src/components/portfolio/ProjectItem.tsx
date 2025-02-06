@@ -2,6 +2,7 @@ import { type FC } from "react";
 import { Link } from "react-router";
 import { motion } from "motion/react";
 import { Project } from "./types";
+import UnderlinedButton from "../common/UnderlinedButton";
 
 interface ProjectItemProps {
   item: Project;
@@ -10,7 +11,7 @@ interface ProjectItemProps {
 const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
   return (
     <motion.div
-      className={`w-[calc(100vw-4rem)] lg:w-[calc(100vw-8rem)] h-screen flex justify-center items-start pt-8 bg-gradient-to `}
+      className={`w-[calc(100vw-4rem)] lg:w-[calc(100vw-8rem)] h-screen flex justify-center items-start pt-8  `}
     >
       <div className="flex flex-col gap-8 text-primary-text">
         <h1 className="text-xl md:text-4xl lg:text-6xl xl:text-8xl font-bold ">
@@ -28,59 +29,26 @@ const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
           <div className="project-text-width md:w-1/2 lg:text-lg flex flex-col gap-8">
             <div className="">{item.desc()}</div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 ">
               {item.tools.map((tool, index) => (
                 <span
                   key={index}
-                  className="p-2 text-sm lg:text-base bg-accent-secondary-bg  text-accent-text rounded-md"
+                  className="text-xs lg:text-sm text-primary-text ring ring-accent-secondary-bg px-1.5 py-1  rounded-md bg-accent-text/50 font-mono"
                 >
                   {tool}
                 </span>
               ))}
             </div>
+
+            <div className="w-full h-0.25 bg-primary-text"></div>
+
+            <div className="flex justify-start gap-8 pr-8">
+              {item.link && (
+                <UnderlinedButton to={item.link} title="Visit Site" />
+              )}
+              <UnderlinedButton to={item.repo} title="GitHub" />
+            </div>
           </div>
-        </div>
-        <div className="flex justify-end gap-4 pr-8">
-          {item.link && (
-            <Link to={item.link} target="_blank" className="">
-              <motion.button
-                className="project-item-button relative "
-                whileHover={{ scale: 1.02 }}
-                transition={{ ease: "easeInOut" }}
-              >
-                <motion.div
-                  className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gradient-mid to-accent-bg z-0 project-item-button border-0 rounded shadow-md"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{
-                    type: "tween",
-                    duration: 0.5,
-                    ease: "easeInOut",
-                  }}
-                >
-                  Visit Site
-                </motion.div>
-                <span className="">Visit Site</span>
-              </motion.button>
-            </Link>
-          )}
-          <Link to={item.repo} target="_blank" className="">
-            <motion.button
-              className="project-item-button relative "
-              whileHover={{ scale: 1.02 }}
-              transition={{ ease: "easeInOut" }}
-            >
-              <motion.div
-                className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gradient-mid to-accent-bg z-0 project-item-button border-0 rounded shadow-md"
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ type: "tween", duration: 0.5, ease: "easeInOut" }}
-              >
-                GitHub
-              </motion.div>
-              <span className="">GitHub</span>
-            </motion.button>
-          </Link>
         </div>
       </div>
     </motion.div>

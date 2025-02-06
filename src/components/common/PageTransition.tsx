@@ -11,9 +11,9 @@ const PageTransition = ({ pathname }: { pathname: string }) => {
       />
       <motion.div
         className="fixed top-0 bottom-0 right-0 left-0 m-auto text-accent-text text-8xl w-fit h-fit z-50"
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
+        initial={{ opacity: 1, display: "block" }}
+        animate={{ opacity: 0, display: "none" }}
+        exit={{ opacity: 0, display: "none" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         {pathname.replace("/", "")}

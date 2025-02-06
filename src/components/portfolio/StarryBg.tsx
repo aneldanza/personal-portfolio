@@ -21,7 +21,8 @@ const StarryBg = () => {
     },
   };
   return (
-    <div className="filter-[url('#goo')] md:blur-sm">
+    <div className="">
+      {/* <div className="filter-[url('#goo')] md:blur-sm"> */}
       <svg
         id="freepik--Sparkles--inject-23"
         className="animable"

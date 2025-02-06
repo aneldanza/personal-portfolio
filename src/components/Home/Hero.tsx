@@ -24,7 +24,7 @@ const Hero = () => {
             width="500"
             height="0.25"
             style={{
-              fill: "rgb(235, 235, 235)",
+              fill: "rgb(var(--primary-text))",
               transformOrigin: "250px 382.525px",
             }}
             id="el1wbjc3ugsyr"
