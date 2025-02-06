@@ -84,7 +84,7 @@
   }
 
   .project-item-button {
-    @apply p-2 text-sm md:px-4 md:text-base lg:px-8 lg:py-4 lg:text-lg text-primary-text font-semibold rounded-md border border-accent-bg;
+    @apply cursor-pointer md:text-lg lg:text-xl xl:text-2xl text-accent-bg  hover:scale-105;
   }
 
   .error-message {
