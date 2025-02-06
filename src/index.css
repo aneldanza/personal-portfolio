@@ -2,14 +2,21 @@
 
 @layer base {
   :root {
-    --bg-accent: 153, 27, 27;
-    --bg-accent-hover: 127, 17, 17;
-    --secondary-bg: 185, 28, 28;
-    --secondary-bg-hover: 159, 18, 18;
+    --bg-accent: 136, 19, 55;
+    /* --bg-accent: 153, 27, 27; */
+    --bg-accent-hover: 120, 15, 50;
+    /* --bg-accent-hover: 127, 17, 17; */
+    --secondary-bg: 92, 107, 192;
+    /* --secondary-bg: 185, 28, 28; */
+    --secondary-bg-hover: 79, 91, 159;
+    /* --secondary-bg-hover: 159, 18, 18; */
     --text-accent: 255, 255, 255;
-    --gradient-from: 252, 231, 243;
+    --gradient-from: 251, 207, 232;
+    /* --gradient-from: 252, 231, 243; */
     --gradient-mid: 255, 237, 213;
+    /* --gradient-mid: 255, 237, 213; */
     --gradient-to: 254, 249, 195;
+    /* --gradient-to: 254, 249, 195; */
     --primary-text: 31, 41, 55;
     --form-bg: 249, 250, 251;
   }
