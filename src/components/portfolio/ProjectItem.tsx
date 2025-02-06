@@ -11,7 +11,7 @@ interface ProjectItemProps {
 const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
   return (
     <motion.div
-      className={`w-[calc(100vw-4rem)] lg:w-[calc(100vw-8rem)] h-screen flex justify-center items-start pt-8 bg-gradient-to `}
+      className={`w-[calc(100vw-4rem)] lg:w-[calc(100vw-8rem)] h-screen flex justify-center items-start pt-8  `}
     >
       <div className="flex flex-col gap-8 text-primary-text">
         <h1 className="text-xl md:text-4xl lg:text-6xl xl:text-8xl font-bold ">
