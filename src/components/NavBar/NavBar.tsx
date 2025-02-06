@@ -31,7 +31,7 @@ const NavBar = () => {
         </Link>
       </div>
       {/* Social Media Icons  */}
-      <div className="hidden md:flex space-x-4 w-1/3 justify-end">
+      <div className="hidden md:flex space-x-4 w-1/3 justify-end z-10">
         <Link
           to="https://github.com/aneldanza"
           target="_blank"
