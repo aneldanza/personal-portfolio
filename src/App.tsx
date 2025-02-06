@@ -28,8 +28,8 @@ const App = () => {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-          <Footer />
         </div>
+        <Footer />
         <div className="hidden z-0 lg:absolute lg:w-full h-36 top-0 left-0 min-w-30 lg:flex">
           <LogoGlow />
         </div>

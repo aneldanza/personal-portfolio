@@ -5,7 +5,7 @@ import AnimatedPageWrapper from "../common/AnimatedPageWrapper";
 const Home = () => {
   return (
     <AnimatedPageWrapper>
-      <div className="h-full flex flex-col lg:flex-row app-container">
+      <div className="h-full flex flex-col lg:flex-row app-container pb-24">
         <div className="home-section relative object-contain">
           <Hero />
         </div>
@@ -27,7 +27,6 @@ const Home = () => {
           <div className="flex gap-4 justify-center lg:justify-start">
             <Link
               to="/portfolio"
-              target="_blank"
               className="p-4 rounded-lg ring-1 ring-accent-bg bg-accent-bg hover:bg-accent-hover hover:ring-2 hover:ring-accent-hover text-accent-text"
             >
               View My Work
