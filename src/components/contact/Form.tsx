@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Formik, Form, ErrorMessage, Field } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
+import Flash from "../common/Flash";
 
 const validationSchema = Yup.object().shape({
   message: Yup.string().required("Message is required"),
@@ -106,14 +107,13 @@ const ContactForm = () => {
             Send
           </button>
           {success && (
-            <span className="text-green-600 font-semibold">
-              Your message has been sent successfully!
-            </span>
+            <Flash message="Message sent successfully!" type="success" />
           )}
           {error && (
-            <span className="text-red-600 font-semibold">
-              There was an error sending your message!
-            </span>
+            <Flash
+              message="An error occurred. Please try again later."
+              type="error"
+            />
           )}
         </Form>
       )}

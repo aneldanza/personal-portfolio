@@ -52,7 +52,7 @@ const ContactMeAnimation = () => {
       <div className="lg:top-36 flex shrink ">
         <TypewriterTextAnimation text="Say Hello" />
       </div>
-      <div className="hidden md:flex md:shrink md:w-1/2 lg:w-full ">
+      <div className="hidden md:flex md:shrink md:absolute md:top-0 md:right-0  lg:w-full lg:static z-30">
         <svg
           className=""
           id="freepik_stories-example"
