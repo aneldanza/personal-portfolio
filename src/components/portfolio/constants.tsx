@@ -26,7 +26,7 @@ export const items = [
       "Quill",
       "Vercel",
     ],
-    img: "src/assets/logo-long.svg",
+    img: "/logo-long.svg",
     link: "https://dev-exchange-dk5n.vercel.app",
     repo: "https://github.com/aneldanza/dev-exchange",
   },
@@ -73,7 +73,7 @@ export const items = [
       </div>
     ),
     tools: ["Javascript", "Github Pages"],
-    img: "src/assets/bubble-party.webp",
+    img: "/bubble-party.webp",
     link: "https://aneldanza.github.io/Bubble-Party",
     repo: "https://github.com/aneldanza/Bubble-Party",
   },
@@ -112,7 +112,7 @@ export const items = [
       </div>
     ),
     tools: ["Javascript", "CerosSDK", "Papa Parse"],
-    img: "src/assets/dc-contactor.png",
+    img: "/dc-contactor.png",
     link: "https://info.littelfuse.com/dc-contactor-selectionguide-mouser",
     repo: "https://github.com/aneldanza/ceros-freelance-projects/tree/main/littelfuse/dc-contactor",
   },
