@@ -12,7 +12,7 @@ const ScrollingContent: FC<ScrollingContentProps> = ({ scrollYProgress }) => {
   return (
     <motion.div style={{ x }} className="flex gap-10">
       {items.map((item) => (
-        <ProjectItem key={item.id} item={item} />
+        <ProjectItem item={item} key={item.id} />
       ))}
     </motion.div>
   );
