@@ -15,13 +15,13 @@ const App = () => {
     <AnimatePresence mode="wait">
       <div
         key={pathname}
-        className="w-screen h-screen bg-gradient-to-b from-gradient-from via-gradient-mid to-gradient-to text-primary-text relative"
+        className="w-screen h-full bg-gradient-to-b from-gradient-from via-gradient-mid to-gradient-to text-primary-text flex flex-col min-h-screen"
       >
         <PageTransition pathname={pathname} />
         <div className="h-24">
           <NavBar />
         </div>
-        <div className="h-[calc(100vh-6rem)]">
+        <div className="flex-grow ">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -29,6 +29,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
+
         <Footer />
         <div className="hidden z-0 lg:absolute lg:w-full h-36 top-0 left-0 min-w-30 lg:flex">
           <LogoGlow />
