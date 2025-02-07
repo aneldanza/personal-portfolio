@@ -48,11 +48,11 @@ const ContactMeAnimation = () => {
     }, 1000);
   }, []);
   return (
-    <div className="w-full h-full flex lg:flex-col items-center justify-center md:justify-between lg:justify-center relative">
-      <div className="lg:top-36 flex shrink ">
+    <div className="w-full h-full flex lg:flex-col items-center justify-center lg:justify-center">
+      <div className="lg:hidden flex shrink">
         <TypewriterTextAnimation text="Say Hello" />
       </div>
-      <div className="hidden md:flex md:shrink md:absolute md:top-0 md:right-0  lg:w-full lg:static z-30">
+      <div className="hidden lg:w-full lg:static z-30 md:block">
         <svg
           className=""
           id="freepik_stories-example"
