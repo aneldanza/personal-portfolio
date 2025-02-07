@@ -5,12 +5,12 @@ import AnimatedPageWrapper from "../common/AnimatedPageWrapper";
 const Home = () => {
   return (
     <AnimatedPageWrapper>
-      <div className="h-full flex flex-col lg:flex-row app-container pb-24">
-        <div className="home-section relative object-contain">
+      <div className="flex flex-col lg:flex-row app-container pb-24 h-full min-h-screen items-center">
+        <div className="home-section object-contain ">
           <Hero />
         </div>
 
-        <div className="home-section flex flex-col gap-8 justify-center lg:items-start items-center">
+        <div className="flex flex-col gap-8 justify-center lg:items-start items-center home-section">
           <h1 className="text-4xl md:text-6xl font-bold ">
             Hi, I’m Anel Danza – Full-Stack Developer
           </h1>
