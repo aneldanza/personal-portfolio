@@ -3,6 +3,7 @@ import HireMeAnimation from "./hireMeAnimation";
 import AnimatedPageWrapper from "../common/AnimatedPageWrapper";
 import StarryBg from "./StarryBg";
 import ScrollIcon from "../about/ScrollIcon";
+// import Footer from "../common/Footer";
 
 const PortfolioPage = () => {
   return (
@@ -43,6 +44,7 @@ const PortfolioPage = () => {
         </h1>
 
         <HireMeAnimation />
+        {/* <Footer /> */}
       </div>
     </AnimatedPageWrapper>
   );

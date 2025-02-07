@@ -53,7 +53,6 @@ const AboutPage = () => {
               SKILLS
             </motion.h1>
 
-            {/* SKILLS LIST  */}
             <motion.div
               initial={{ x: "-300px" }}
               animate={isSkillContainerInView ? { x: 0 } : {}}
@@ -66,12 +65,10 @@ const AboutPage = () => {
               ))}
             </motion.div>
 
-            {/* SCROLL SVG  */}
-
             <ScrollIcon />
           </div>
-          {/* EXPERIENCE  */}
 
+          {/* EXPERIENCE  */}
           <div ref={experienceContainerRef} className="about-section pb-48">
             <motion.div
               initial={{ x: "-300px" }}
@@ -81,7 +78,6 @@ const AboutPage = () => {
               EXPERIENCE
             </motion.div>
 
-            {/* EXPERIENCE LIST  */}
             <motion.div
               initial={{ x: "-300px" }}
               animate={isExperienceContainerInView ? { x: 0 } : {}}

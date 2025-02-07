@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to text-primary-text">
-      <div className="app-container py-4 text-sm text-center">
+    <footer className="bg-primary-text text-accent-text app-container ">
+      <div className="py-4 text-sm text-center">
         <p>
           <a href="https://storyset.com/people">
             People illustrations by Storyset
