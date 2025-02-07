@@ -77,7 +77,7 @@
   }
 
   .project-image-width {
-    @apply w-36 md:w-80 lg:w-[500px] xl:w-[600px];
+    @apply w-36 md:w-80 lg:w-[400px] xl:w-[500px];
   }
 
   .project-text-width {

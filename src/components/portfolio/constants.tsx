@@ -31,14 +31,14 @@ export const items = [
     title: "DevExchange API",
     desc: () => (
       <div>
-        DevExchange API is a powerful and secure Rails backend, built with
-        PostgreSQL, designed to fuel an engaging, Stack Overflow-inspired
-        platform. With seamless Devise-JWT authentication enabled by HTTP-only
-        cookies, it ensures top-notch security for users. This API empowers
-        frontend clients with rich features, including user profiles, dynamic
-        question and answer interactions, versatile tagging, lively comment
-        threads, and intuitive voting capabilities—all the essential tools to
-        create a vibrant and collaborative Q&A community.
+        DevExchange API is a powerful and secure Rails backend, designed to fuel
+        an engaging, Stack Overflow-inspired platform. With seamless Devise-JWT
+        authentication enabled by HTTP-only cookies, it ensures top-notch
+        security for users. This API empowers frontend clients with rich
+        features, including user profiles, dynamic question and answer
+        interactions, versatile tagging, comment threads, and intuitive voting
+        capabilities—all the essential tools to create a vibrant and
+        collaborative Q&A community.
       </div>
     ),
     tools: [
