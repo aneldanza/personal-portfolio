@@ -11,9 +11,9 @@ interface ProjectItemProps {
 const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
   return (
     <motion.div
-      className={`w-[calc(100vw-4rem)] lg:w-[calc(100vw-8rem)] h-screen flex justify-center items-start pt-8  `}
+      className={`w-[calc(100vw-4rem)] lg:w-[calc(100vw-8rem)] h-screen flex justify-center items-start pt-6 lg:pt-8  `}
     >
-      <div className="flex flex-col gap-8 text-primary-text">
+      <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 text-primary-text max-h-screen">
         <h1 className="text-xl md:text-4xl lg:text-6xl xl:text-8xl font-bold ">
           {item.title}
         </h1>
@@ -26,8 +26,8 @@ const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
             <img src={item.img} alt={item.title} className="rounded" />
           </Link>
 
-          <div className="project-text-width md:w-1/2 lg:text-lg flex flex-col gap-8">
-            <div className="">{item.desc()}</div>
+          <div className="project-text-width md:w-1/2 lg:text-lg flex flex-col gap-4 md:gap-6 lg:gap-8">
+            <div className="text-sm md:text-base">{item.desc()}</div>
 
             <div className="flex flex-wrap gap-3 ">
               {item.tools.map((tool, index) => (

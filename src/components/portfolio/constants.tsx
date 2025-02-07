@@ -18,12 +18,7 @@ export const items = [
       "React",
       "Tailwind CSS",
       "RTK Query",
-      "React Router",
       "DevExhchange API",
-      "React Icons",
-      "Formik",
-      "Flowbite-React",
-      "Quill",
       "Vercel",
     ],
     img: "/logo-long.svg",
@@ -47,12 +42,12 @@ export const items = [
       </div>
     ),
     tools: [
-      "Ruby on Rails",
+      "Ruby-on-Rails",
       "PostgreSQL",
       "Devise-JWT",
       "Kaminari",
       "Jsonapi-Serializer",
-      "PG Search",
+      "PG-Search",
       "Heroku",
     ],
     img: "https://digital-image-assets.s3.us-east-2.amazonaws.com/portfolio/devexchange-api.webp",
@@ -82,12 +77,11 @@ export const items = [
 
     title: "Littelfuse Selection Guide",
     desc: () => (
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4">
         <p>
-          The DC-Contactor plugin is a game-changing tool for Littelfuse,
-          revolutionizing distributor link management. Designed for seamless
-          updates and additions, it centralizes all product URL references in an
-          easy-to-use CSV file.
+          The DC-Contactor plugin is a game-changing tool for Littelfuse.
+          Designed for seamless updates and additions, it centralizes all
+          product URL references in an easy-to-use CSV file.
         </p>
 
         <div>
