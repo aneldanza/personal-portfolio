@@ -60,17 +60,17 @@ export const items = [
     title: "Bubble Party",
     desc: () => (
       <div>
-        Bubble Party is a fun, vibrant web app built with vanilla JavaScript,
-        packed with playful Spongebob-inspired images and sounds. Dive into a
-        bubbly, immersive experience where every click and interaction brings
-        the joy of the underwater world to life. Perfect for a burst of
-        nostalgia and entertainment!
+        Bubble Party is a fun, vibrant web game built with Typescript, packed
+        with playful Spongebob-inspired images and sounds. Dive into a bubbly,
+        immersive experience where every click and interaction brings the joy of
+        the underwater world to life. Perfect for a burst of nostalgia and
+        entertainment!
       </div>
     ),
-    tools: ["Javascript", "Github Pages"],
+    tools: ["Typescript", "Tailwind CSS", "Vite", "Vercel"],
     img: "/bubble-party.webp",
-    link: "https://aneldanza.github.io/Bubble-Party",
-    repo: "https://github.com/aneldanza/Bubble-Party",
+    link: "https://bubble-party-2-0.vercel.app/",
+    repo: "https://github.com/aneldanza/bubble-party-2.0",
   },
   {
     id: 4,
