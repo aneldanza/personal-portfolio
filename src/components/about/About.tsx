@@ -21,9 +21,11 @@ const AboutPage = () => {
   });
   return (
     <AnimatedPageWrapper>
-      <div ref={containerRef} className="h-full flex relative overflow-y-auto">
+      <div
+        ref={containerRef}
+        className="h-[calc(100vh-6rem)]overflow-y-scroll flex relative"
+      >
         <div className=" p-4 sm:p-8 md:p-12 lg:p-20 xl:p-42 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
-          {/* BIOGRAPHY  */}
           <div className="about-section">
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
 
@@ -42,7 +44,6 @@ const AboutPage = () => {
             <ScrollIcon />
           </div>
 
-          {/* SKILLS  */}
           <div ref={skillContainerRef} className="about-section">
             <motion.h1
               initial={{ x: "-300px" }}
@@ -68,7 +69,6 @@ const AboutPage = () => {
             <ScrollIcon />
           </div>
 
-          {/* EXPERIENCE  */}
           <div ref={experienceContainerRef} className="about-section pb-48">
             <motion.div
               initial={{ x: "-300px" }}
@@ -89,7 +89,7 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="hidden lg:block sticky top-0 z-30 w-1/3 xl:w-1/2 h-screen">
+        <div className="hidden lg:block sticky top-0 z-30 w-1/3 xl:w-1/2 h-[calc(100vh-6rem)]">
           <Innovation scrollYProgress={scrollYProgress} />
         </div>
       </div>

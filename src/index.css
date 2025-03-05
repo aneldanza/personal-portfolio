@@ -2,27 +2,46 @@
 
 @layer base {
   :root {
-    --bg-accent: 136, 19, 55;
-    /* --bg-accent: 153, 27, 27; */
+    /* first iteration  */
+    /* --bg-accent: 153, 27, 27;
+    --bg-accent-hover: 127, 17, 17;
+    --secondary-bg: 185, 28, 28;
+    --secondary-bg-hover: 159, 18, 18;
+    --gradient-from: 252, 231, 243;
+    --gradient-mid: 255, 237, 213;
+    --gradient-to: 254, 249, 195;
+    --primary-text: 31, 41, 55; */
+
+    /* second iteration */
+    /* --bg-accent: 136, 19, 55;
     --bg-accent-hover: 120, 15, 50;
-    /* --bg-accent-hover: 127, 17, 17; */
     --secondary-bg: 92, 107, 192;
-    /* --secondary-bg: 185, 28, 28; */
     --secondary-bg-hover: 79, 91, 159;
-    /* --secondary-bg-hover: 159, 18, 18; */
     --text-accent: 255, 255, 255;
     --gradient-from: 253, 226, 228;
-    /* --gradient-from: 252, 231, 243; */
     --gradient-mid: 254, 249, 195;
-    /* --gradient-mid: 255, 237, 213; */
     --gradient-to: 243, 232, 253;
-    /* --gradient-to: 254, 249, 195; */
-    --primary-text: 31, 41, 55;
-    /* --primary-text: 31, 41, 55; */
+    --primary-text: 31, 41, 55; */
+
     --form-bg: 249, 250, 251;
     --horizontal-scroll-from: 243, 232, 253;
     --horizontal-scroll-mid: 92, 107, 192, 0.25;
     --horizontal-scroll-to: 136, 19, 55, 0.25;
+
+    /* dark theme  */
+    --bg-accent: 252, 211, 77;
+    --bg-accent-hover: 250, 190, 50;
+    --secondary-bg: 254, 240, 138;
+    --secondary-bg-hover: 253, 224, 71;
+    --text-accent: 31, 41, 55;
+    --gradient-from: 30, 58, 138;
+    --gradient-mid: 13, 71, 85;
+    --gradient-to: 17, 24, 39;
+    --primary-text: 209, 213, 219;
+    --form-bg: 253, 245, 230;
+    --horizontal-scroll-from: 17, 24, 39;
+    --horizontal-scroll-mid: 17, 24, 39;
+    --horizontal-scroll-to: 17, 24, 39;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -76,13 +95,13 @@
     @apply bg-primary-text text-accent-text px-2 py-1 rounded text-sm  hover:bg-white hover:text-black border border-black;
   }
 
-  .project-image-width {
+  /* .project-image-width {
     @apply w-36 md:w-80 lg:w-[400px] xl:w-[500px];
   }
 
   .project-text-width {
     @apply w-full md:w-full lg:w-[500px] xl:w-[600px];
-  }
+  } */
 
   .input-field {
     @apply bg-transparent border-b-2 border-b-gray-900 outline-none;
@@ -93,8 +112,80 @@
   }
 
   .project-item-button {
-    @apply cursor-pointer md:text-lg lg:text-xl xl:text-2xl text-accent-bg  hover:scale-105;
+    @apply cursor-pointer md:text-xl lg:text-xl xl:text-2xl text-accent-bg  hover:scale-105;
   }
+
+  .horizontal-scroll-container {
+    @apply h-screen bg-gradient-to-b from-horizontal-scroll-from via-horizontal-scroll-mid to-horizontal-scroll-to sticky top-0 flex items-start overflow-hidden py-8;
+  }
+
+  .projects-layout {
+    @apply columns-1 lg:columns-2 gap-6 md:gap-12 lg:gap-24  items-start bg-gradient-to z-20 justify-center;
+  }
+  /* 
+  .projects-layout {
+    @apply flex flex-row flex-wrap gap-6 md:gap-12 p-4 items-center bg-gradient-to z-20 justify-center
+  } */
+
+  .project-card {
+    @apply w-full  flex border border-primary-text rounded-lg shadow-sm shadow-primary-text bg-gradient-mid/50  p-4 md:p-6 lg:p-8 transition-transform duration-300 ease-in-out hover:translate-y-[-10px] hover:shadow-lg hover:shadow-accent-secondary-bg mb-6 md:mb-12 lg:mb-24 break-inside-avoid;
+  }
+
+  .project-item {
+    @apply w-full flex justify-center items-start h-full;
+  }
+
+  .project-content-container {
+    @apply flex flex-col gap-4 md:gap-6 lg:gap-8 text-primary-text items-center;
+  }
+
+  .project-title {
+    @apply hidden lg:block text-xl md:text-4xl  font-bold flex-shrink min-w-0 max-w-full flex-nowrap text-center;
+  }
+
+  .project-description {
+    @apply w-full  lg:text-lg xl:text-xl flex flex-col gap-4 md:gap-6 lg:gap-8 text-justify;
+  }
+
+  .project-buttons-container {
+    @apply flex justify-center gap-8 lg:gap-16 pb-8;
+  }
+
+  .project-image-container {
+    @apply relative w-full bg-neutral-100 rounded hover:shadow-sm hover:shadow-primary-text shrink-0 flex items-center justify-center;
+  }
+
+  /* 
+  .horizontal-scroll-container {
+    @apply h-screen max-h-fit bg-gradient-to-b from-horizontal-scroll-from via-horizontal-scroll-mid to-horizontal-scroll-to sticky top-0 flex items-start overflow-hidden;
+  } */
+
+  /* .project-image-container {
+    @apply relative h-36 md:h-80 lg:h-[400px] xl:h-[500px] project-image-width bg-neutral-100 rounded hover:transition-transform  hover:shadow-lg hover:shadow-primary-text shrink-0 flex items-center justify-center;
+  } */
+
+  /* 
+  .project-buttons-container {
+    @apply flex justify-start gap-8 pb-8;
+  } */
+
+  /* 
+  .project-description {
+    @apply project-text-width md:w-full lg:text-lg xl:text-xl flex flex-col gap-4 md:gap-6 lg:gap-8;
+  } */
+
+  /* 
+  .project-title {
+    @apply text-xl md:text-4xl lg:text-6xl font-bold flex-shrink min-w-0 max-w-full flex-nowrap;
+  } */
+
+  /* .project-content-container {
+    @apply flex flex-col gap-4 md:gap-6 lg:gap-8 text-primary-text max-h-screen;
+  } */
+
+  /* .project-item {
+    @apply w-[calc(100vw-4rem)] lg:w-[calc(100vw-8rem)] h-screen flex justify-center items-start  p-2 md:p-6 lg:p-8;
+  } */
 
   .error-message {
     @apply text-red-500 text-sm;
