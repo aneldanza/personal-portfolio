@@ -10,13 +10,9 @@ interface ProjectItemProps {
 
 const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
   return (
-    <motion.div
-      className={`w-[calc(100vw-4rem)] lg:w-[calc(100vw-8rem)] flex justify-center items-start h-screen p-2 md:p-6 lg:p-8`}
-    >
-      <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 text-primary-text max-h-screen">
-        <h1 className="text-xl md:text-4xl lg:text-6xl font-bold flex-shrink min-w-0 max-w-full flex-nowrap">
-          {item.title}
-        </h1>
+    <motion.div className="project-item">
+      <div className="project-content-container">
+        <h1 className="project-title">{item.title}</h1>
         <div className="flex flex-col gap-4 lg:flex-row md:gap-6 lg:gap-8">
           <Link
             to={item.link ? item.link : item.repo}
@@ -26,7 +22,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
             <img src={item.img} alt={item.title} className="rounded" />
           </Link>
 
-          <div className="project-text-width md:w-full lg:text-lg xl:text-xl flex flex-col gap-4 md:gap-6 lg:gap-8">
+          <div className="project-description">
             <div className="text-sm md:text-base lg:text-lg">{item.desc()}</div>
 
             <div className="flex flex-wrap gap-3 ">
@@ -42,7 +38,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
 
             <div className="w-full h-0.25 bg-primary-text"></div>
 
-            <div className="flex justify-start gap-8 pb-8">
+            <div className="project-buttons-container">
               {item.link && (
                 <UnderlinedButton to={item.link} title="Visit Site" />
               )}

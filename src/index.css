@@ -96,6 +96,53 @@
     @apply cursor-pointer md:text-lg lg:text-xl xl:text-2xl text-accent-bg  hover:scale-105;
   }
 
+  .project-item {
+    @apply w-full  lg:w-[calc(100vw-8rem)] lg:h-screen flex justify-center items-start  p-2 md:p-6 lg:p-8;
+  }
+
+  .project-content-container {
+    @apply flex flex-col gap-4 md:gap-6 lg:gap-8 text-primary-text max-h-screen;
+  }
+
+  .project-title {
+    @apply text-xl md:text-4xl lg:text-6xl font-bold flex-shrink min-w-0 max-w-full flex-nowrap text-center lg:text-left;
+  }
+
+  .project-description {
+    @apply w-full md:w-full lg:w-[500px] xl:w-[600px] lg:text-lg xl:text-xl flex flex-col gap-4 md:gap-6 lg:gap-8 text-justify;
+  }
+
+  .project-buttons-container {
+    @apply flex justify-center lg:justify-start gap-8 pb-8;
+  }
+
+  .project-card {
+    @apply flex border border-primary-text rounded-lg p-2 m-4 shadow-sm shadow-primary-text bg-gradient-mid/50;
+  }
+
+  /* 
+  .project-buttons-container {
+    @apply flex justify-start gap-8 pb-8;
+  } */
+
+  /* 
+  .project-description {
+    @apply project-text-width md:w-full lg:text-lg xl:text-xl flex flex-col gap-4 md:gap-6 lg:gap-8;
+  } */
+
+  /* 
+  .project-title {
+    @apply text-xl md:text-4xl lg:text-6xl font-bold flex-shrink min-w-0 max-w-full flex-nowrap;
+  } */
+
+  /* .project-content-container {
+    @apply flex flex-col gap-4 md:gap-6 lg:gap-8 text-primary-text max-h-screen;
+  } */
+
+  /* .project-item {
+    @apply w-[calc(100vw-4rem)] lg:w-[calc(100vw-8rem)] h-screen flex justify-center items-start  p-2 md:p-6 lg:p-8;
+  } */
+
   .error-message {
     @apply text-red-500 text-sm;
   }
