@@ -2,27 +2,46 @@
 
 @layer base {
   :root {
-    --bg-accent: 136, 19, 55;
-    /* --bg-accent: 153, 27, 27; */
+    /* first iteration  */
+    /* --bg-accent: 153, 27, 27;
+    --bg-accent-hover: 127, 17, 17;
+    --secondary-bg: 185, 28, 28;
+    --secondary-bg-hover: 159, 18, 18;
+    --gradient-from: 252, 231, 243;
+    --gradient-mid: 255, 237, 213;
+    --gradient-to: 254, 249, 195;
+    --primary-text: 31, 41, 55; */
+
+    /* second iteration */
+    /* --bg-accent: 136, 19, 55;
     --bg-accent-hover: 120, 15, 50;
-    /* --bg-accent-hover: 127, 17, 17; */
     --secondary-bg: 92, 107, 192;
-    /* --secondary-bg: 185, 28, 28; */
     --secondary-bg-hover: 79, 91, 159;
-    /* --secondary-bg-hover: 159, 18, 18; */
     --text-accent: 255, 255, 255;
     --gradient-from: 253, 226, 228;
-    /* --gradient-from: 252, 231, 243; */
     --gradient-mid: 254, 249, 195;
-    /* --gradient-mid: 255, 237, 213; */
     --gradient-to: 243, 232, 253;
-    /* --gradient-to: 254, 249, 195; */
-    --primary-text: 31, 41, 55;
-    /* --primary-text: 31, 41, 55; */
+    --primary-text: 31, 41, 55; */
+
     --form-bg: 249, 250, 251;
     --horizontal-scroll-from: 243, 232, 253;
     --horizontal-scroll-mid: 92, 107, 192, 0.25;
     --horizontal-scroll-to: 136, 19, 55, 0.25;
+
+    /* dark theme  */
+    --bg-accent: 252, 211, 77;
+    --bg-accent-hover: 250, 190, 50;
+    --secondary-bg: 254, 240, 138;
+    --secondary-bg-hover: 253, 224, 71;
+    --text-accent: 31, 41, 55;
+    --gradient-from: 30, 58, 138;
+    --gradient-mid: 13, 71, 85;
+    --gradient-to: 17, 24, 39;
+    --primary-text: 209, 213, 219;
+    --form-bg: 253, 245, 230;
+    --horizontal-scroll-from: 17, 24, 39;
+    --horizontal-scroll-mid: 17, 24, 39;
+    --horizontal-scroll-to: 17, 24, 39;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -121,7 +140,7 @@
   }
 
   .project-buttons-container {
-    @apply flex justify-center lg:justify-start gap-8 pb-8;
+    @apply flex justify-center gap-8 lg:gap-16 pb-8;
   }
 
   .project-image-container {
