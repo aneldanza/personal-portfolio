@@ -43,7 +43,7 @@ const PortfolioPage = () => {
       <div className="hidden lg:block">
         <HorizontalScrollCarousel />
       </div>
-      <div className="flex flex-col gap-6 justify-items-center lg:hidden bg-gradient-to">
+      <div className="flex flex-col gap-6 md:gap-12 p-4 items-center lg:hidden bg-gradient-to">
         {items.map((item) => (
           <div key={item.id} className="project-card">
             <ProjectItem item={item} />

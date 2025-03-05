@@ -34,8 +34,7 @@ export const items = [
       <div>
         <span className="font-bold">DevExchange API</span> is a powerful and
         secure Rails backend, designed to fuel an engaging, Stack
-        Overflow-inspired platform. With seamless Devise-JWT authentication
-        enabled by HTTP-only cookies, it ensures top-notch security for users.
+        Overflow-inspired platform. With seamless Devise-JWT authentication.
         This API empowers frontend clients with rich features, including user
         profiles, dynamic question and answer interactions, versatile tagging,
         comment threads, and intuitive voting capabilities—all the essential

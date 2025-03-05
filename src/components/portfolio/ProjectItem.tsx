@@ -13,7 +13,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
     <motion.div className="project-item">
       <div className="project-content-container">
         <h1 className="project-title">{item.title}</h1>
-        <div className="flex flex-col gap-4 lg:flex-row md:gap-6 lg:gap-8 items-center">
+        <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 items-center">
           <Link
             to={item.link ? item.link : item.repo}
             target="_blank"
@@ -23,7 +23,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
           </Link>
 
           <div className="project-description">
-            <div className="text-sm md:text-base lg:text-lg">{item.desc()}</div>
+            <div className="text-sm md:text-lg lg:text-lg">{item.desc()}</div>
 
             <div className="flex flex-wrap gap-3 ">
               {item.tools.map((tool, index) => (
