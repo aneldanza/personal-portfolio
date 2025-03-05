@@ -76,17 +76,17 @@ const MobileViewMenu: FC<MobileViewMenuProps> = ({
         <motion.div
           variants={topVariants}
           animate={isOpen ? "opened" : "closed"}
-          className="h-1 w-10 bg-black rounded origin-left"
+          className="h-1 w-10 bg-primary-text/70 rounded origin-left"
         ></motion.div>
         <motion.div
           variants={centerVariants}
           animate={isOpen ? "opened" : "closed"}
-          className="h-1 w-10 bg-black rounded origin-left"
+          className="h-1 w-10 bg-primary-text/70 rounded origin-left"
         ></motion.div>
         <motion.div
           variants={bottomVariants}
           animate={isOpen ? "opened" : "closed"}
-          className="h-1 w-10 bg-black rounded origin-left"
+          className="h-1 w-10 bg-primary-text/70 rounded origin-left"
         ></motion.div>
       </button>
 
