@@ -13,11 +13,11 @@ const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
     <motion.div className="project-item">
       <div className="project-content-container">
         <h1 className="project-title">{item.title}</h1>
-        <div className="flex flex-col gap-4 lg:flex-row md:gap-6 lg:gap-8">
+        <div className="flex flex-col gap-4 lg:flex-row md:gap-6 lg:gap-8 items-center">
           <Link
             to={item.link ? item.link : item.repo}
             target="_blank"
-            className="relative h-36 md:h-80 lg:h-[400px] xl:h-[500px] project-image-width bg-neutral-100 rounded hover:transition-transform  hover:shadow-lg hover:shadow-primary-text shrink-0 flex items-center justify-center"
+            className="project-image-container"
           >
             <img src={item.img} alt={item.title} className="rounded" />
           </Link>

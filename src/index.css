@@ -101,11 +101,11 @@
   }
 
   .project-content-container {
-    @apply flex flex-col gap-4 md:gap-6 lg:gap-8 text-primary-text max-h-screen;
+    @apply flex flex-col gap-4 md:gap-6 lg:gap-8 text-primary-text max-h-screen justify-items-center;
   }
 
   .project-title {
-    @apply text-xl md:text-4xl lg:text-6xl font-bold flex-shrink min-w-0 max-w-full flex-nowrap text-center lg:text-left;
+    @apply hidden lg:block text-xl md:text-4xl lg:text-6xl font-bold flex-shrink min-w-0 max-w-full flex-nowrap text-center lg:text-left;
   }
 
   .project-description {
@@ -116,9 +116,17 @@
     @apply flex justify-center lg:justify-start gap-8 pb-8;
   }
 
+  .project-image-container {
+    @apply relative  md:h-80 lg:h-[400px] xl:h-[500px] w-full md:w-80 lg:w-[400px] xl:w-[500px] bg-neutral-100 rounded hover:transition-transform  hover:shadow-lg hover:shadow-primary-text shrink-0 flex items-center justify-center;
+  }
+
   .project-card {
     @apply flex border border-primary-text rounded-lg p-2 m-4 shadow-sm shadow-primary-text bg-gradient-mid/50;
   }
+
+  /* .project-image-container {
+    @apply relative h-36 md:h-80 lg:h-[400px] xl:h-[500px] project-image-width bg-neutral-100 rounded hover:transition-transform  hover:shadow-lg hover:shadow-primary-text shrink-0 flex items-center justify-center;
+  } */
 
   /* 
   .project-buttons-container {
